@@ -7,9 +7,8 @@ var productSchema = Schema({
   image: string,
   description:string,
   stock: number,
-  idMercancia: {type: Schema.ObjectId, ref: 'Mercancia'},
-  idCategory: {type: Schema.ObjectId, ref: 'Categoria'},
-  idProveedor: {type: Schema.ObjectId, ref: 'Proveedor'},
+  Category: {type: Schema.ObjectId, ref: 'Categoria'},
+  Proveedor: {type: Schema.ObjectId, ref: 'Proveedor'},
 
 });
 
