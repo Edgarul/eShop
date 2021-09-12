@@ -2,8 +2,15 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const userSchema = Schema({
-  email: string,
-  password: string,
+  email: {
+    type: String,
+    required: true
+  },
+  password: {
+    type: String,
+    required: true
+  },
+  role: { type: Schema.ObjectId, ref: 'Role' },
   creationDate: { type: Date, default: Date.now }
 });
 

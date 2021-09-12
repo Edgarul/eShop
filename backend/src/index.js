@@ -18,9 +18,12 @@ useUnifiedTopology: true}, (err,res) => {
       console.log('Conectado en el puerto ' + port);
     })
   }
-})
+});
 
 app.use(bodyParser.urlencoded({ extended:true }));
 app.use(bodyParser.json());
+
+// Routes
+app.use('/api/auth', require('./routes/auth.route'))
 
 module.exports = app;
